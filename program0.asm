@@ -26,11 +26,11 @@ main:
 ; -- ADD  ---
 	POP rax
 	ADD qword [rsp], rax
-; -- PRINT  ---
+; -- PRINT  --
 	LEA rcx, string_literal_0
 	XOR eax, eax
 	CALL printf
-; -- HALT  ---
+; -- HALT  --
 	JMP EXIT_LABEL
 EXIT_LABEL:
 	XOR rax, rax
