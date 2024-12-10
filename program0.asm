@@ -7,7 +7,7 @@ read_number resq 1 ; 64-bits integer = 8 bytes
 ; -- constants --
 section .data
 read_format db "%d", 0 ; the format string for scanf
-string_literal_0 db "", 0
+string_literal_0 db "Hello  World", 0
 ; -- Entry Point --
 section .text
 global main
@@ -26,7 +26,7 @@ main:
 ; -- ADD  ---
 	POP rax
 	ADD qword [rsp], rax
-; -- PRINT  --
+; -- PRINT  ---
 	LEA rcx, string_literal_0
 	XOR eax, eax
 	CALL printf
